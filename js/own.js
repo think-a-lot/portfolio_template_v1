@@ -14,7 +14,7 @@
         $('.nav_a').click(function(){ /* Close Menu when it's clicked 2 */
           $('header').toggleClass('open');
           $('nav').fadeToggle(500);
-        });        
+        }); 
       }
     });
     
@@ -39,11 +39,11 @@
 
     //Scroll Fitting Animation - Scrollify   
     $(function(){
-      $.scrollify({section:".js-section"});  
+//      $.scrollify({section:".js-section"});  
       
       $.scrollify({
         scrollSpeed: 80,
-      });      
+      });
     });
     
     //Scroll FadeIn Animation
