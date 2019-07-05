@@ -1,49 +1,50 @@
-    * { color: #fff; box-sizing: border-box; scroll-behavior: smooth; 
+    * { color: #fff; box-sizing: border-box; scroll-behavior: smooth;
       font-family:'Alegreya SC', serif, 'Sawarabi Mincho', sans-serif ;
-      font-style: italic; font-weight: 300; text-shadow: 0 0 6px #001475;
+      font-style: italic; font-weight: 300; text-shadow: 0 0 6px #000;
     }
     body { margin: 0; background-color:#000; }
     img { object-fit: cover; max-width: 90%; }
     section, footer { width: 100vw; position: relative; margin: 0; padding: 1rem; flex-direction: column; align-items: center; align-content: center; display: flex; justify-content: center; }
     section { height: 100vh !important; }/* background-size:cover; ← なぜか iPad Pro のみ必要 */
     footer { min-height: 100vh !important;  }
-    
+
     #bg_movie{
       position: absolute; bottom:15px; width:100vw; height:100vh; z-index:-100; filter: blur(15px); object-fit: cover;  background-size: cover;
     }
     #bg_movie source{ min-width:100%; min-height:100%; }
     section#top {
-      position: relative; z-index:2; 
+      position: relative; z-index:2;
 /*      background: url("https://images2.imgbox.com/46/16/CKsfDX37_o.png") no-repeat center #000;*/
       background-color: #000;
       text-align: center; display:flex; align-items:center; justify-content:center;
     }
-    section#about{ background: url("img/about%20bg.png") no-repeat center; z-index:2; } /* url("https://images2.imgbox.com/ae/30/868ylf5T_o.png") */ 
-    section#work1{ background: url("img/work%201%20bg.png") no-repeat center; } /*  url("https://images2.imgbox.com/17/1e/lork4JAS_o.png")  */
-    section#work2{ background: url("img/work%202%20bg.png") no-repeat center; } /*  url("https://images2.imgbox.com/e4/4e/YENQH1zj_o.png")  */
-    section#work3{ background: url("img/work%203%20bg%20yuen%20%E7%B5%90%E7%B8%81.png") no-repeat center; } /*  url("https://images2.imgbox.com/0b/cb/lyK0CKw1_o.png") */
-    
-    h1 .top_title { font-family:'Pinyon Script',cursive; font-size: 5.2rem;  } 
-    h2 { text-align:center; margin-top: 1vh; } 
-    
-    .detail .image { margin-bottom:1.5rem; text-align:center; }
-    
-    section#about h2 { font-size:2.5rem; } 
+    section#about{ background: url("img/about%20bg.png") no-repeat center; z-index:2; } /* url("https://images2.imgbox.com/ae/30/868ylf5T_o.png") */
+    section#work1{ background: url("img/wp_portfolio-WebDesign004_edit.png") no-repeat center; background-size: cover;} /*  url("https://images2.imgbox.com/17/1e/lork4JAS_o.png")  */
+    section#work2{ background: url("img/wp_portfolio-AppDesign006_MusicPlay1_3000px_blur.jpg") no-repeat center; background-size: cover;} /*  url("https://images2.imgbox.com/e4/4e/YENQH1zj_o.png")  */
+    section#work3{ background: url("img/wp_portfolio-WebDesign002_blur.jpg") no-repeat center; background-size: cover; } /*  url("https://images2.imgbox.com/0b/cb/lyK0CKw1_o.png") */
+
+    h1 .top_title { font-family:'Pinyon Script',cursive; font-size: 5.2rem;  }
+    h2 { text-align:center; margin-top: 1vh; }
+
+    .detail .image { margin-bottom:1.5rem; text-align:center; align-self: flex-end; }
+
+    section#about h2 { font-size:2.5rem; }
     section#about .image { text-align: center;}
     section#about .image img { max-width: 65%; }
     section#about .more_detail dd{ text-align: center; font-size: 1.1rem; }
     section#work1 span.title_jp { margin-left:0.5rem; }
     section .section-content { margin: 0 auto; }
-    
+
     .more_detail dl { display:flex; margin: 0.5rem auto;}
-    .more_detail dl dt { 
+    .more_detail dl dt {
       flex:0.4; font-size:calc(0.7rem + 0.25vw); opacity: 0.7; text-align:right; position:relative; top:3px; }
-    .more_detail dl dd{ flex:1.6; margin-left:0.5rem; }
-    
+    .more_detail dl dd{ flex:1.6; margin-left:0.5rem; text-overflow: ellipsis;
+    overflow: hidden; }
+
     footer#contact { background-color:#1E1E1E; display:flex; flex-direction:column; padding:2rem; }
     footer#contact article#form { width:100%; }
     footer#contact article#form div { display:flex; flex-direction: column; margin-top: 1.5rem; }
-    footer#contact article#form div label { flex:0.3; text-align:center; margin-bottom:0.5rem; } 
+    footer#contact article#form div label { flex:0.3; text-align:center; margin-bottom:0.5rem; }
     footer#contact article#form div input, footer#contact article#form div textarea { flex:0.6; background: none; font-family: 'Caudex', serif, 'Sawarabi Mincho', sans-serif ; text-align:center; }
     footer#contact article#form div textarea { font-size:1rem; }
     footer#contact article#form div input { font-size:1.3rem; border-style: none none solid none; border-width:1px; border-color:#777; line-height:2rem;}
@@ -57,21 +58,21 @@
     header nav ul { display:flex; align-items:center; padding:0; margin:1.3rem 0.5rem; }
     header nav ul li a { color:#fff; text-decoration:none; font-weight:bold; padding:16px; }
 /*    #nav_toggle{ display:none; }*/
-    
-    
+
+
     /* SP - Nav Menu */
     @media(max-width:1024px){
       section .is-show .section-content { opacity: 1; }
       section .section-contetnt { opacity: 0;  transition: opacity .5s ease .75s; }
-      nav{ 
-        display:none; position:fixed; /* ← fixed : Menu固定表示 */ 
+      nav{
+        display:none; position:fixed; /* ← fixed : Menu固定表示 */
         bottom:0; left: 0; width:100%; height:100vh; background:#222; opacity:0.9; left:0; }
       nav a { font-size:1.3rem; }
       header nav ul { display:block; width:90%; height:350px; position:absolute; top:0; right:0; bottom:0; left:0; margin:auto; }
       header nav ul li{ margin:0 auto; text-align:center; list-style: none;}
       header nav ul li:last-child{ border:none; }
       header nav ul li a { display:block; }
-      
+
       #nav_toggle{ display:block; width:35px; height:40px; position:fixed; bottom:0px; left:10px; z-index:100; }
       #nav_toggle div { position:relative; }
       #nav_toggle span { display:block; height:1px; background:#777; position:absolute; left:8px; transition:0.3s ease-in-out; }
@@ -90,20 +91,20 @@
         top: 10px; transform: rotate(-135deg);
       }
     }
-    
+
     @media(min-width:400px){
       .more_detail dl dt { font-size:calc(1rem + 0.25vw); flex:0.5; top:4px;  }
-      .more_detail dl dd { font-size:calc(1rem + 0.7vw); flex: 1.5; }   
-      footer#contact article#form { max-width:500px; }      
+      .more_detail dl dd { font-size:calc(1rem + 0.7vw); flex: 1.5; }
+      footer#contact article#form { max-width:500px; }
     }
-    
+
     @media(min-width:550px){
       section { padding:3rem; }
       img{ max-width: 85%; }
       section#about .image img { max-width: 60%; }
       h1 .top_title{ font-size: 4.5rem ; }
       h2 { font-size: 2.5rem; }
-      section#about h2 { font-size: 3.5rem; } 
+      section#about h2 { font-size: 3.5rem; }
       section#about .more_detail dd{ font-size: 1.7rem; }
       .more_detail dl dt { flex:0.65; top:4px;  }
       .more_detail dl dd { flex:1.35; }
@@ -111,7 +112,7 @@
       #nav_toggle span { left: 12px; }
       #nav_toggle span:nth-child(1){ top:0px; width:70%; }
       #nav_toggle span:nth-child(2){ top:8px; width:50%; }
-      #nav_toggle span:nth-child(3){ top:16px; width:90%; }   
+      #nav_toggle span:nth-child(3){ top:16px; width:90%; }
       .open #nav_toggle span:nth-child(1){
         top:10px;
         width:90%;
@@ -122,21 +123,21 @@
       }
       .open #nav_toggle span:nth-child(3){
         top: 10px; transform: rotate(-135deg);
-      }      
+      }
     }
-    
+
     @media(min-width:700px){
       h1 .top_title { font-size:8.5rem; }
     }
-    
+
     @media(min-width:900px){
       img { max-width: 80%; }
       .more_detail dl dt { flex:0.75; top:4px;  }
       .more_detail dl dd { flex:1.25; }
     }
-    
+
     /* PC */
-    @media(min-width:1025px){ 
+    @media(min-width:1025px){
       nav { display: flex; justify-content: space-between; position: fixed; padding: 0 1rem; width: 100vw ; z-index: 1; }
       nav ul { display: flex; }
       nav li { list-style: none; }
@@ -145,7 +146,7 @@
       h1 .top_title { font-size:8.5rem; }
       h2 { margin-bottom:1rem; font-size:2.9rem; }
       section#about h2 { margin-right:4rem; }
-      
+
       .detail{ display:flex; flex-direction:row; }
       .detail img{ max-width:90%; }
       .detail .image{ flex:1; padding-left:4vw; }
@@ -176,12 +177,12 @@
     .change_font{
       animation-name: change_font;
       animation-duration: 5s;
-      animation-iteration-count: infinite; 
+      animation-iteration-count: infinite;
       animation-timing-function: ease-in;
     }
     @keyframes change_font{
        0%{ opacity: 0 ; }
       50%{ opacity: 1 ; }
       100%{ opacity: 0 ; }
-    }    
+    }
 */
